@@ -1,22 +1,16 @@
-import React from 'react';
+import React from 'react'
 import Clock from 'react-live-clock';
+import { Switch } from 'antd';
+import Moment from 'moment';
+import { render } from 'react-dom';
 
-const ClockDemo = () => {
-   
-    const date = new Date();
+const Time = () => {
 
     return (
-        <div className='container'>
-            <div class='row' className='hdr'>
-                <div class='col-sm-12'>
-                    <h3>Connected</h3>
-                </div>
-                <div className='clk'>
-                <Clock value={date} />
-                </div>
-            </div>
+        <div>
+          <Clock format={'h:mm:ss a'} ticking={true} timezone={'US/Central'} />
         </div>
     )
 }
 
-export default ClockDemo
+export default Time

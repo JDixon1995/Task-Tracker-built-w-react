@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
-import ClockDemo from './components/Clock';
+import Clock from './components/Clock.js';
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -55,7 +55,7 @@ const fetchTasks = async () => {
   return (
     <div className="container">
       <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
-      <ClockDemo />
+      <Clock />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete=
